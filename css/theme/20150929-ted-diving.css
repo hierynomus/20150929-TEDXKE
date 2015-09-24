@@ -11,3 +11,7 @@
 .reveal h2.answer {
   color: lightgreen;
 }
+
+.reveal .inverse h1, .reveal .inverse h2, .reveal .inverse h3, .reveal .inverse p {
+  color: black;
+}

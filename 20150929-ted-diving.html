@@ -1,35 +1,35 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+  <title>reveal.js - The HTML Presentation Framework</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css" id="theme">
-    <link rel="stylesheet" href="css/theme/20150929-ted-diving.css">
-    <link rel="stylesheet" href="plugin/timer/timer.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="css/theme/20150929-ted-diving.css">
+  <link rel="stylesheet" href="plugin/timer/timer.css">
 
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
 
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -58,9 +58,56 @@
             <p>The record depth of 214m was set by Herbert Nitsch in 2007 in the "No Limit" category. 145m is the depth set by William Winram in 2013 in the "Variable Weight" category.</p>
           </section>
         </section>
+        <section>
+          <section data-background="images/20150929-ted-diving/dutchwaters.jpg" data-state="question">
+            <h2>Do the Dutch waters contain poisonous fish</h2>
+            <p>A) Yes</p>
+            <p>B) No</p>
+          </section>
+          <section>
+            <h2 class="answer">A) Yes</h2>
+            <img data-src="images/20150929-ted-diving/Trachinus_draco.jpg" height="250" />
+            <p>The Greater Weever (Grote Pieterman) is a poisonous fish, and its sting is potentially lethal</p>
+          </section>
+        </section>
+        <section>
+          <section data-state="question">
+            <h2>Which of these two causes more deaths per year</h2>
+            <span>
+              <div style="display: inline-block;">
+                <img data-src="images/20150929-ted-diving/greatwhite.jpg" height="250" />
+                <p>A) Great White</p>
+              </div>
+              <div style="display: inline-block;">
+                <img data-src="images/20150929-ted-diving/boxjellyfish.jpg" height="250" />
+                <p>B) Box Jellyfish</p>
+              </div>
+            </span>
+          </section>
+          <section data-background="images/20150929-ted-diving/boxjellyfish.jpg">
+            <h2 class="answer">B) Box Jellyfish</h2>
+            <p>The box jellyfish kills on average 20-40 people in the Philippines alone, and estimates are 100 worldwide. In 2014 out of 130 shark attacks, only 3 were fatal.</p>
+          </section>
+        </section>
+        <section>
+          <section class="inverse" data-state="question" data-background="images/20150929-ted-diving/havingcold.jpg">
+            <h2>Can you dive when you have a cold</h2>
+            <p>A) Yes</p>
+            <p>B) No</p>
+          </section>
+          <section>
+            <h2 class="answer">A) Yes</h2>
+            <img data-src="images/20150929-ted-diving/masksqueeze.jpg" height="250" />
+            <p>You can, but it might have some nasty side-effects such as mask-squeeze as you might be unable to equalize</p>
+          </section>
+        </section>
       </div>
     </div>
 
+<!--
+    <img data-src="images/20150929-ted-diving/" />
+
+-->
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
@@ -78,17 +125,17 @@
 
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'plugin/timer/timer.js', async: true, callback: function() { timer.initialize(); } },
-          { src: 'plugin/notes/notes.js', async: true }
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/timer/timer.js', async: true, callback: function() { timer.initialize(); } },
+        { src: 'plugin/notes/notes.js', async: true }
         ]
       });
 
     </script>
 
   </body>
-</html>
+  </html>

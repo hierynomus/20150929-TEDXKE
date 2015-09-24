@@ -50,6 +50,7 @@ function update_timer(timer) {
     }
   } else {
     timer.stop();
+    Reveal.down();
   }
 };
 
