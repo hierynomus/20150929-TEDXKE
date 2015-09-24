@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Audiowide);
 
-.reveal h1 {
+.reveal h1, .reveal h2, .reveal h3 {
   font-family: 'Audiowide', cursive;
+}
+
+.reveal p {
+  font-family: 'Audiowide', cursive;
+}
+
+.reveal h2.answer {
+  color: lightgreen;
 }

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css" id="theme">
     <link rel="stylesheet" href="css/theme/20150929-ted-diving.css">
+    <link rel="stylesheet" href="plugin/timer/timer.css">
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -43,6 +44,19 @@
       <div class="slides">
         <section data-background="images/20150929-ted-diving/scubadanger.jpg">
           <h1>The <span style="color: red;">Dangers</span> of Diving</h1>
+          <p>Elgert Verhoef - CMAS 3* (PADI DM)</p>
+          <p>Jeroen van Erp - PADI AOWD</p>
+        </section>
+        <section data-background="images/20150929-ted-diving/freediving.jpg">
+          <section data-state="question">
+            <h2>What is the record deepest depth for freediving (apnea diving)</h2>
+            <p>A) 214m</p>
+            <p>B) 145m</p>
+          </section>
+          <section>
+            <h2 class="answer">A) 214m</h2>
+            <p>The record depth of 214m was set by Herbert Nitsch in 2007 in the "No Limit" category. 145m is the depth set by William Winram in 2013 in the "Variable Weight" category.</p>
+          </section>
         </section>
       </div>
     </div>
@@ -69,6 +83,7 @@
           { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/timer/timer.js', async: true, callback: function() { timer.initialize(); } },
           { src: 'plugin/notes/notes.js', async: true }
         ]
       });
