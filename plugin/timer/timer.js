@@ -21,9 +21,15 @@ timer.initialize=function() {
 
 timer.reset=function() {
   this.timeout = 16;
-  window.clearInterval(this.interval_handle);
-  this.interval_handle = null;
+  timer.stop();
   update_timer(this);
+}
+
+timer.stop=function() {
+  if (this.interval_handle != null) {
+    window.clearInterval(this.interval_handle);
+    this.interval_handle = null;
+  }
 }
 
 timer.start=function() {
@@ -43,7 +49,7 @@ function update_timer(timer) {
       timer.text_element.style.color = 'red';
     }
   } else {
-    timer.reset();
+    timer.stop();
   }
 };
 
