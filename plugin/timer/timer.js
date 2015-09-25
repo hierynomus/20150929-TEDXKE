@@ -1,10 +1,12 @@
 var timer = {
-  timeout: 16,
+  max_timeout: 11,
+  timeout: 0,
   text_element: null,
   interval_handle: null,
 };
 
 timer.initialize=function() {
+  this.timeout = this.max_timeout;
   var title_footer=document.createElement('footer');
   title_footer.setAttribute('id','timer');
   // title_footer.setAttribute('style','background:'+this.background);
@@ -20,7 +22,7 @@ timer.initialize=function() {
 }
 
 timer.reset=function() {
-  this.timeout = 16;
+  this.timeout = this.max_timeout;
   timer.stop();
   update_timer(this);
 }
@@ -41,12 +43,12 @@ function update_timer(timer) {
     timer.timeout -= 1;
     timer.text_element.removeChild(timer.text_element.firstChild);
     timer.text_element.appendChild(document.createTextNode(timer.timeout))
-    if (timer.timeout > 10) {
-      timer.text_element.style.color = 'lightgreen';
-    } else if (timer.timeout <= 10 && timer.timeout > 5) {
-      timer.text_element.style.color = 'yellow';
-    } else if (timer.timeout <= 5) {
+     if (timer.timeout <= 3) {
       timer.text_element.style.color = 'red';
+    } else if (timer.timeout <= timer.max_timeout / 2) {
+      timer.text_element.style.color = 'yellow';
+    } else {
+      timer.text_element.style.color = 'lightgreen';
     }
   } else {
     timer.stop();
