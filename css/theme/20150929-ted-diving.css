@@ -15,3 +15,13 @@
 .reveal .inverse h1, .reveal .inverse h2, .reveal .inverse h3, .reveal .inverse p {
   color: black;
 }
+
+.reveal .boxed {
+  background: rgba(66, 66, 66, 0.5) !important;
+  border: 1px solid white;
+}
+
+.reveal .boxed_light {
+  background: rgba(195, 195, 195, 0.3) !important;
+  border: 1px solid white;
+}
